@@ -1,0 +1,8 @@
+# Minimal dependencies for the simple web interface
+flask>=2.2.3
+requests>=2.28.1
+beautifulsoup4>=4.11.1
+lxml>=4.9.2
+
+# Optional dependencies for forum reviews (not required for basic functionality)
+# praw>=7.7.0  # Python Reddit API Wrapper - Uncomment if you want forum reviews

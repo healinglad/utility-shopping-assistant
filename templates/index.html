@@ -1,0 +1,58 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Shopping Assistant</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Shopping Assistant</h1>
+            <p>Find the best products based on your requirements</p>
+            
+            <div class="search-form">
+                <form id="search-form">
+                    <div class="form-group">
+                        <label for="product">Product:</label>
+                        <input type="text" id="product" name="product" placeholder="e.g., laptop, headphones, coffee maker" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="budget">Budget (INR):</label>
+                        <input type="number" id="budget" name="budget" placeholder="e.g., 50000" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="preferences">Preferences (optional):</label>
+                        <input type="text" id="preferences" name="preferences" placeholder="e.g., gaming, lightweight, wireless">
+                        <small>Separate multiple preferences with commas</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <button type="submit">Search</button>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="loading" id="loading">
+                <p>Searching for products...</p>
+                <div class="spinner"></div>
+            </div>
+            
+            <div class="results" id="results">
+                <h2>Results</h2>
+                <pre id="results-content"></pre>
+            </div>
+            
+            <div class="error" id="error">
+                <h2>Error</h2>
+                <p id="error-message"></p>
+            </div>
+        </div>
+        
+        <script src="{{ url_for('static', filename='script.js') }}"></script>
+    </body>
+    </html>
+    

@@ -1,0 +1,3 @@
+"""
+Shopping Assistant modules package.
+"""
